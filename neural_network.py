@@ -114,11 +114,24 @@ def backpropagation(x):
     return deriv_w,bias_temp,weights
 div_w,bias,weights1=backpropagation(input_features)
 
-print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-print(backpropagation(input_features))
-print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-print("bias is: ",bias)
-print("the weights is : ",weights1)
+#print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+#print(backpropagation(input_features))
+#print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+#print("bias is: ",bias)
+#print("the weights is : ",weights1)
 
-output_features=sigmoid(np.dot(input_features,weights1)+bias)
-print(output_features)
+#output_features=sigmoid(np.dot(input_features,weights1)+bias)
+#print(output_features)
+
+for counter in range(9999):
+    print("##################################")
+    div_w,bias,weights1=backpropagation(input_features)
+    print("*************************************")
+    print(div_w)
+    print(bias)
+    print(weights1)
+    print("----------------------------------------------------")
+    output_features=sigmoid(np.dot(input_features,weights1)+bias)
+    print(output_features)
+    print("----------------------------------------------------")
+    print("*************************************")
